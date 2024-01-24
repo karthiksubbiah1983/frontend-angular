@@ -1,0 +1,33 @@
+.c-navigation{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+
+    ul {
+        display:flex;
+        margin:0;
+
+        li {
+            margin-left: 20px;
+            display:block;
+            list-style: none;
+            padding:0;
+
+            a {
+                text-decoration: none;
+                color:grey;
+            }
+
+            a:hover {
+                color:rgb(3, 112, 148)
+            }
+
+            a.activebutton {
+                color:royalblue;
+            }
+        }
+    }
+
+    
+}

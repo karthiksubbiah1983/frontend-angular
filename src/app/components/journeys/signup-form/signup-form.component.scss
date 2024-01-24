@@ -1,0 +1,17 @@
+.c-signupform {
+    margin-top: 2rem;
+
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
+
+
+    &__checkbox {
+        display: flex;
+
+        label {
+            margin-left: 10px;
+        }
+    }
+
+}

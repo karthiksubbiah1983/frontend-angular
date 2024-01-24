@@ -1,0 +1,105 @@
+{
+  "uuid": "9eb8c926-e018-4c1f-95b2-58df0942681a",
+  "lastMigration": 32,
+  "name": "Signup",
+  "endpointPrefix": "api/",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "bcb90fa5-c2e4-4801-bf86-a2dc054ecff4",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "saveuser",
+      "responses": [
+        {
+          "uuid": "bc9466e7-1c92-4933-8bd5-02ec8b79759b",
+          "body": "{\n  \"firstname\": \"{{body 'firstname'}}\",\n  \"lastname\": \"{{body 'lastname'}}\",\n  \"email\": \"{{body 'email'}}\",\n  \"marketing\": \"{{body 'marketing'}}\",\n  \"terms\": \"{{body 'terms'}}\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "SEQUENTIAL"
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "bcb90fa5-c2e4-4801-bf86-a2dc054ecff4"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "4873d313-55c2-426a-a6d3-90383012893f",
+      "id": "rl7a",
+      "name": "UserData",
+      "documentation": "",
+      "value": "{\r\n  \"firstname\": \"{{body 'firstname'}}\",\r\n  \"lastname\": \"{{body 'lastname'}}\",\r\n  \"email\": \"{{body 'email'}}\",\r\n  \"marketing\": \"{{body 'marketing'}}\",\r\n  \"terms\": \"{{body 'terms'}}\"\r\n}"
+    }
+  ],
+  "callbacks": []
+}
