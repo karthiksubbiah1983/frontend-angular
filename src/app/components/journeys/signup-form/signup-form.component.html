@@ -1,0 +1,76 @@
+<div class="row c-signupform">
+  <div class="col-md-4 mt-20 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h3>Signup</h3>
+        <div *ngIf="message">{{ message }}
+          <div class="mt-3 mx-auto">
+            <button type="reset" class="btn btn-danger ms-2" (click)="resetForm()">
+              New Register
+            </button>
+          </div>
+        </div>
+        <form [formGroup]="signUpForm" (ngSubmit)="saveUser()" autocomplete="off" *ngIf="!message">
+          <div class="mb-3">
+            <label for="Firstname" class="form-label"><span class="text-danger">*</span>Firstname</label>
+            <input type="text" class="form-control" formControlName="firstname" />
+            <div class="mt-1 text-danger" *ngIf="
+                  (signUpFormControl.firstname.touched || submitted) &&
+                  signUpFormControl.firstname.errors?.['required']">
+              Firstname is required
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Lastname" class="form-label"><span class="text-danger">*</span>Lastname</label>
+            <input type="text" class="form-control" formControlName="lastname" />
+            <div class="mt-1 text-danger" *ngIf="
+                  (signUpFormControl.lastname.touched || submitted) &&
+                  signUpFormControl.lastname.errors?.['required']">
+              Lastname is required
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Email" class="form-label"><span class="text-danger">*</span>Email</label>
+            <input type="text" class="form-control" formControlName="email" />
+            <div class="mt-1 text-danger" *ngIf="
+                  (signUpFormControl.email.touched || submitted) &&
+                  signUpFormControl.email.errors?.['required']">
+              Email is required
+            </div>
+            <div class="mt-1 text-danger" *ngIf="
+                  signUpFormControl.email.touched &&
+                  signUpFormControl.email.errors?.['email']">
+              Enter a valid email address
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="c-signupform__checkbox">
+              <input type="checkbox" formControlName="marketing">
+              <label class="form-check-label" for="marketing">Interested in sending Marketing mails and new product
+                promos</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="c-signupform__checkbox">
+              <input type="checkbox" formControlName="terms">
+              <label class="form-check-label" for="terms">Accept Terms and Conditions</label>
+            </div>
+            <div class="mt-1 text-danger" *ngIf="
+                  (signUpFormControl.terms.touched || submitted) &&
+                  signUpFormControl.terms.errors?.['required']">
+              Accept Terms and Conditions
+            </div>
+          </div>
+          <div class="mx-auto">
+            <button id='save-btn' [disabled]="!signUpForm.valid" type="submit" class="btn btn-success">Register</button>
+            <button id='reset-btn' type="reset" class="btn btn-danger ms-2" (click)="resetForm()">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
