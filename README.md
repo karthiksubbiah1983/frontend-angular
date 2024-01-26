@@ -1,7 +1,5 @@
 # MyAngularProject
 
-# MyAngularProject
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
 
 ## Steps to run the Project
@@ -32,6 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## About Other Packages and Tools used.
 Used Mockoon for mock server, git has the mockon environment configuration which can be imported and started in the mockoon desktop app.
+
 Used Bootstrap CSS for basic grids and utilities.
 
 
@@ -43,8 +42,13 @@ Used Angular Reactive Forms for scalability
 
 ## Scenarious
 The application is responsive
+
 User can navigate between home and signup link on header
+
 User can enter the form fields like firstname, lastname, email, marketing and terms. Except marketing all are mandatory.
+
 Any fields which was not entered will throw an error along with red highlights around text field.
+
 On register the form will show the succesfull registration after posting the data to mock server.
+
 On click of the register the complete form will be shown back.
