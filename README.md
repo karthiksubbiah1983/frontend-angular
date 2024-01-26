@@ -7,6 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Once Cloned the repository, do 
 `npm install`
 
+Install Mockoon Mock server tool and import the environment json from Mockoon folder to mock api. 
+**Download**: https://mockoon.com/download/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
